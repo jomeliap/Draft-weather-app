@@ -11,6 +11,10 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
     <script
       src="https://kit.fontawesome.com/ed87aeedef.js"
       crossorigin="anonymous"
@@ -20,70 +24,38 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-info">
+      <div class="weather-app-border">
         <div class="row">
-          <div class="col-6">
+          <div class="col-8">
             <h1>Prague</h1>
-            <ul>
-              <li><span>Sunday Dec 4 10:00</span> | Snow</li>
-              <li>
-                <div>Humidity:</div>
-                <div>Precipitation:</div>
-                <div>Wind:</div>
-              </li>
-            </ul>
+              <ul>
+                <li>
+                  <span class="date">Tuesday Dec 6 1:00 | </span>
+                  <span class="date-description">Snow</span>
+                </li>
+                <li>
+                  <span class="precipitation">Precipitation: </span
+                  ><span class="humidity"> | Humidity: </span
+                  ><span class="wind"> | Wind: </span>
+                </li>
+              </ul>
+          </div>
+          <div class="col-4">
+          <div class="weather-icon">
+          <i class="fa-solid fa-snowflake"></i>
+          </div>
+          <div>
+            <span class="temperature">3</span>
+            <span class="unit">° C | F</span>
           </div>
         </div>
       </div>
-      <div class="col-6">
-        <div class="weather-icon">
-          <i class="fa-solid fa-snowflake"></i>
-        </div>
-        <div>
-          <span class="temperature">5</span> <span class="unit">° C | F</span>
-        </div>
-      </div>
-    </div>
-    <small>
-      <a
-        href="https://github.com/jomeliap/Draft-weather-app.git"
-        target="_blank"
-        >Open source-code</a
-      >
-      by Jomélia
-    </small>
-    <div class="container">
-      <div class="row">
-        <div class="col">1 of 2</div>
-        <div class="col">2 of 2</div>
-      </div>
-      <div class="row">
-        <div class="col">1 of 3</div>
-        <div class="col">2 of 3</div>
-        <div class="col">3 of 3</div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-8">
-          <h1>Prague</h1>
-          <ul>
-            <li>
-              <span class="date">Tuesday Dec 6 1:00 | </span>
-              <span class="date-description">Snow</span>
-            </li>
-            <li>
-              <span class="precipitation">Precipitation: </span
-              ><span class="humidity"> | Humidity: </span
-              ><span class="wind"> | Wind: </span>
-            </li>
-          </ul>
-        </div>
-        <div class="col-4">
-          <div class="weather-icon">
-          <i class="fa-solid fa-snowflake"></i>
-        </div>
-      </div>
+        <small>
+          <a href="https://github.com/jomeliap/Draft-weather-app.git"
+          target="_blank"
+          >Open source-code</a>
+          by Jomélia
+        </small>
     </div>
 
     <script src="src/index.js"></script>
