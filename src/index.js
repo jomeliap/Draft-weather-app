@@ -28,9 +28,20 @@ function displayTemperature(response) {
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = `${wind}`;
   document.querySelector("#date-description").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].main);
 }
 
+let dateElement = document.querySelector("#date");
+let currentTime = new Date();
+dateElement.innerHTML = formatDate(currentTime);
+
 let apiKey = "a4da89de5958761ca307fe3393bc406e";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Lisbon&appid=${apiKey}&units=metric`;
+let city = "Prague";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 axios.get(apiUrl).then(displayTemperature);
