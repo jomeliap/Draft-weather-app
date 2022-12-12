@@ -37,11 +37,21 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].main);
 }
 
+function cityDetails(city) {
+  let apiKey = "a4da89de5958761ca307fe3393bc406e";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function SearchCity(event) {
+  event.preventDefault();
+  let city = document.querySelector("#city-input").value;
+  cityDetails(city);
+}
+
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 
-let apiKey = "a4da89de5958761ca307fe3393bc406e";
-let city = "Prague";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-axios.get(apiUrl).then(displayTemperature);
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", SearchCity);
