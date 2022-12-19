@@ -12,6 +12,9 @@ h1 {
 body {
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f4edef;
 }
 
 li {
@@ -35,7 +38,7 @@ small {
 .weather-app-border {
   max-width: 800px;
   margin: 100px auto;
-  box-shadow: 10px 10px rgb(65 50 100 / 2%);
+  box-shadow: 10px 10px rgba(244, 237, 239, 0.02);
 
 }
 
@@ -43,6 +46,7 @@ small {
   padding: 40px;
   border: 1px solid #dadde1;
   border-radius: 16px;
+  background-color: white;
 }
 
 .weather-temperature img {
@@ -56,14 +60,15 @@ small {
   font-size: 60px;
   line-height: 60px;
   font-weight: 400;
-  margin: 0 auto;
+  position: relative;
+  top: 3px;
 
 }
 
 .weather-temperature .unit {
   position: relative;
   font-size: 17px;
-  top: -30px;
+  top: -22px;
 }
 
 .weather-forecast {

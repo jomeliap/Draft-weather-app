@@ -102,5 +102,3 @@ dateElement.innerHTML = formatDate(currentTime);
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", SearchCity);
-
-cityDetails("Lisbon");
